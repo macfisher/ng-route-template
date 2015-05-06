@@ -1,7 +1,9 @@
 <!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html ng-app="routeApp">
 <head>
+  <meta charset="utf-8">
+  
   <!-- SCROLLS -->
   <!-- load bootstrap and fontawesome via CDN -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
@@ -12,8 +14,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
 	  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
   <script src="script.js"></script>
+  
+  <!-- set the base/root URL of app -->
+  <base href="/">
 </head>
-<body>
+<body ng-controller="mainController">
 
 	<!-- HEADER AND NAVBAR -->
 	<header>
@@ -34,9 +39,10 @@
 
 	<!-- MAIN CONTENT AND INJECTED VIEWS -->
 	<div id="main">
-
+		{{ message }}
 		<!-- angular templating -->
 		<!-- this is where content will be injected -->
+		<div ng-view></div>
 
 	</div>
 
