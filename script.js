@@ -1,6 +1,6 @@
 // script.js
 
-var routeApp = angular.module('routeApp', []);
+var routeApp = angular.module('routeApp', ['ngRoute']);
 
 // routes
 // set $locationProvider to true enable html5Mode, removing '#'
@@ -20,7 +20,7 @@ routeApp.config(function($routeProvider, $locationProvider) {
 		})
 		
 		// contact
-		.when('/about', {
+		.when('/contact', {
 			templateUrl : 'pages/contact.html',
 			controller : 'contactController'
 		});
