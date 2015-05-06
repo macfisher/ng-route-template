@@ -1,6 +1,6 @@
 // script.js
 
-var routeApp = angular.module('routeApp', ['ngRoute']);
+var routeApp = angular.module('routeApp', ['ngRoute', 'ngAnimate']);
 
 // routes
 // set $locationProvider to true enable html5Mode, removing '#'
@@ -33,14 +33,17 @@ routeApp.config(function($routeProvider, $locationProvider) {
 routeApp.controller('mainController', function($scope) {
 	
 	$scope.message = "Hello mainController.";
+	$scope.pageClass = 'page-home';
 });
 
 routeApp.controller('aboutController', function($scope) {
 	
 	$scope.message = "Hello aboutController.";
+	$scope.pageClass = 'page-about';
 });
 
 routeApp.controller('contactController', function($scope) {
 	
 	$scope.message = "Hello contactController.";
+	$scope.pageClass = 'page-contact';
 });
